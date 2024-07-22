@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Medicamento } from "./types";
 import fuzzysort from "fuzzysort";
-import Card from "./components/card";
+import CardDisplay from "./components/CardDisplay";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -28,22 +28,17 @@ function App() {
   return (
     <>
       <section>
-        <label htmlFor="consulta" hidden={true}>
-          Consulta
-        </label>
-
         <input
           type="search"
           name="consulta"
+          aria-label="consulta"
           placeholder="Nombre del medicamento."
           value={query}
           onChange={handleChange}
         />
       </section>
       <section>
-        {results.map((result, i) => {
-          return <Card key={i} medicamento={result.obj} />;
-        })}
+        <CardDisplay items={results} />
       </section>
     </>
   );
