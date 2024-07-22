@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@picocss/pico": "^2.0.6",
     "fuzzysort": "^3.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -24,6 +25,7 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
+    "sass": "^1.77.8",
     "typescript": "^5.2.2",
     "vite": "^5.3.4"
   }

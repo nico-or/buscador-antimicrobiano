@@ -1,4 +1,9 @@
-body {
+@use "@picocss/pico/scss/pico" with (
+  $semantic-root-element: "#root",
+  $enable-semantic-container: true,
+);
+
+#root {
   display: flex;
   flex-direction: column;
   height: 100vh;
