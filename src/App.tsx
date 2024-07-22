@@ -1,19 +1,12 @@
-import { useEffect, useState } from "react";
-import { Medicamento } from "./types";
+import { useState } from "react";
 import fuzzysort from "fuzzysort";
 import CardDisplay from "./components/CardDisplay";
+import { useLoaderData } from "react-router-dom";
+import { Medicamento } from "./types";
 
 function App() {
   const [query, setQuery] = useState("");
-  const [data, setData] = useState<Medicamento[]>([]);
-
-  useEffect(() => {
-    fetch("./data.json")
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data);
-      });
-  }, []);
+  const data = useLoaderData() as Medicamento[];
 
   const results = fuzzysort.go(query, data, {
     threshold: 0.5,
