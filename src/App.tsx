@@ -27,27 +27,19 @@ function App() {
 
   return (
     <>
-      <header>
-        <h1>Antimicrobianos</h1>
-      </header>
-      <main>
-        <section>
-          <input
-            type="search"
-            name="consulta"
-            aria-label="consulta"
-            placeholder="Nombre del medicamento."
-            value={query}
-            onChange={handleChange}
-          />
-        </section>
-        <section>
-          <CardDisplay items={results} />
-        </section>
-      </main>
-      <footer>
-        <div>&copy; 2024 Nicolas Órdenes</div>
-      </footer>
+      <section>
+        <input
+          type="search"
+          name="consulta"
+          aria-label="consulta"
+          placeholder="Nombre del medicamento."
+          value={query}
+          onChange={handleChange}
+        />
+      </section>
+      <section>
+        <CardDisplay items={results} />
+      </section>
     </>
   );
 }
