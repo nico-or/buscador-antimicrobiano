@@ -22,7 +22,7 @@ const router = createHashRouter([
         loader: medicamentosLoader,
       },
       {
-        path: "/medicamentos/:id",
+        path: "/medicamentos/:slug",
         element: <Medicamento />,
         loader: medicamentosLoader,
       },

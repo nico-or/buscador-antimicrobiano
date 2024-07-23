@@ -7,6 +7,8 @@ export type Medicamento = {
   ph: string;
   osmolaridad: string;
   riesgo: string;
+  id: number;
+  slug: string;
 };
 
 export type Riesgo = "Bajo" | "Moderado" | "Alto";

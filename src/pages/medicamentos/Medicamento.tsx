@@ -1,18 +1,14 @@
-import { useLoaderData, useNavigate, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { Medicamento as MedType, Riesgo } from "../../types";
 import Section from "./Section";
 import RiesgoMessage from "./RiesgoMessage";
 
 function Medicamento() {
   const data = useLoaderData() as MedType[];
+  const { slug } = useParams<{ slug: string }>();
+  const medicamento = data.find((item) => item["slug"] == slug) as MedType;
 
-  const { id } = useParams<{ id: string }>();
-  const index = Number(id);
-
-  const navigate = useNavigate();
-  if (isNaN(index)) navigate("/");
-
-  const medicamento = data[index];
+  if (medicamento === undefined) throw new Error("Medicamento no registrado.");
 
   return (
     <div>

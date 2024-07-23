@@ -16,10 +16,11 @@ const style: CSSProperties = {
 function ResultDisplay({ items }: Props) {
   return (
     <div style={style}>
-      {items.map((item, i) => {
+      {items.map((item) => {
+        const medicamento = item.obj;
         return (
-          <Link to={`medicamentos/${i}`} key={i}>
-            <Result item={item.obj} />
+          <Link to={`medicamentos/${medicamento.slug}`} key={medicamento.id}>
+            <Result item={medicamento} />
           </Link>
         );
       })}
