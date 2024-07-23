@@ -12,3 +12,8 @@ export type Medicamento = {
 };
 
 export type Riesgo = "Bajo" | "Moderado" | "Alto";
+
+export type Referencia = {
+  id: number;
+  nombre: string;
+};

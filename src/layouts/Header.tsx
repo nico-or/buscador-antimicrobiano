@@ -13,6 +13,13 @@ function Header() {
               </Link>
             </li>
           </ul>
+          <ul>
+            <li>
+              <Link to="/informacion">
+                <small>Sobre la aplicación</small>
+              </Link>
+            </li>
+          </ul>
         </nav>
       </header>
     </>

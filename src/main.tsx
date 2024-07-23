@@ -7,7 +7,11 @@ import "./index.scss";
 import Home from "./pages/home/Home.tsx";
 import HomeLayout from "./layouts/HomeLayout.tsx";
 import Medicamento from "./pages/medicamentos/Medicamento.tsx";
-import { medicamentosLoader } from "./loaders/medicamentosLoader.tsx";
+import {
+  medicamentosLoader,
+  referenciasLoader,
+} from "./loaders/medicamentosLoader.tsx";
+import Informacion from "./pages/informacion/Informacion.tsx";
 import { default as GlobalError } from "./Error.tsx";
 
 const router = createHashRouter([
@@ -25,6 +29,11 @@ const router = createHashRouter([
         path: "/medicamentos/:slug",
         element: <Medicamento />,
         loader: medicamentosLoader,
+      },
+      {
+        path: "/informacion",
+        element: <Informacion />,
+        loader: referenciasLoader,
       },
     ],
   },
