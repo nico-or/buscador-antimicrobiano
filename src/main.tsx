@@ -4,8 +4,9 @@ import { createHashRouter, RouterProvider } from "react-router-dom";
 
 import "./index.scss";
 
-import App from "./App.tsx";
+import Home from "./pages/home/Home.tsx";
 import HomeLayout from "./layouts/HomeLayout.tsx";
+import Medicamento from "./pages/medicamentos/Medicamento.tsx";
 import { medicamentosLoader } from "./loaders/medicamentosLoader.tsx";
 
 const router = createHashRouter([
@@ -15,7 +16,12 @@ const router = createHashRouter([
     children: [
       {
         index: true,
-        element: <App />,
+        element: <Home />,
+        loader: medicamentosLoader,
+      },
+      {
+        path: "/medicamentos/:id",
+        element: <Medicamento />,
         loader: medicamentosLoader,
       },
     ],

@@ -1,10 +1,10 @@
 import { useState } from "react";
 import fuzzysort from "fuzzysort";
-import CardDisplay from "./components/CardDisplay";
+import ResultDisplay from "./ResultDisplay";
 import { useLoaderData } from "react-router-dom";
-import { Medicamento } from "./types";
+import { Medicamento } from "../../types";
 
-function App() {
+function Home() {
   const [query, setQuery] = useState("");
   const data = useLoaderData() as Medicamento[];
 
@@ -20,6 +20,13 @@ function App() {
 
   return (
     <>
+      <h1
+        style={{
+          textAlign: "center",
+        }}
+      >
+        Búsqueda de antimicrobianos
+      </h1>
       <section>
         <input
           type="search"
@@ -31,10 +38,10 @@ function App() {
         />
       </section>
       <section>
-        <CardDisplay items={results} />
+        <ResultDisplay items={results} />
       </section>
     </>
   );
 }
 
-export default App;
+export default Home;

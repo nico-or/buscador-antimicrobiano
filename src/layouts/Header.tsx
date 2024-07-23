@@ -1,8 +1,21 @@
+import { Link } from "react-router-dom";
+import { Home } from "react-feather";
+
 function Header() {
   return (
-    <header>
-      <h1>Antimicrobianos</h1>
-    </header>
+    <>
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">
+                <Home />
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </>
   );
 }
 
