@@ -8,11 +8,13 @@ import Home from "./pages/home/Home.tsx";
 import HomeLayout from "./layouts/HomeLayout.tsx";
 import Medicamento from "./pages/medicamentos/Medicamento.tsx";
 import { medicamentosLoader } from "./loaders/medicamentosLoader.tsx";
+import { default as GlobalError } from "./Error.tsx";
 
 const router = createHashRouter([
   {
     path: "/",
     element: <HomeLayout />,
+    errorElement: <GlobalError />,
     children: [
       {
         index: true,
