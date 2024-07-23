@@ -8,3 +8,5 @@ export type Medicamento = {
   osmolaridad: string;
   riesgo: string;
 };
+
+export type Riesgo = "Bajo" | "Moderado" | "Alto";

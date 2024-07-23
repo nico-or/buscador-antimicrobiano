@@ -1,6 +1,7 @@
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
-import { Medicamento as MedType } from "../../types";
+import { Medicamento as MedType, Riesgo } from "../../types";
 import Section from "./Section";
+import RiesgoMessage from "./RiesgoMessage";
 
 function Medicamento() {
   const data = useLoaderData() as MedType[];
@@ -39,7 +40,7 @@ function Medicamento() {
         {medicamento.osmolaridad}
       </Section>
       <Section titulo="Riesgo de daño local" subtitulo="">
-        {medicamento.riesgo}
+        <RiesgoMessage riesgo={medicamento.riesgo as Riesgo} />
       </Section>
     </div>
   );

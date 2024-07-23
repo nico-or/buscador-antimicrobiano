@@ -257,7 +257,7 @@
     "estabilidad": "No disponible",
     "ph": "No disponible",
     "osmolaridad": "No  disponible",
-    "riesgo": "Riesgo alto"
+    "riesgo": "Alto"
   },
   {
     "nombre": "Levofloxacino  500 mg",
@@ -327,7 +327,7 @@
     "estabilidad": "TA:6 h SF0.9% TA: 8 h SG5%",
     "ph": "No disponible",
     "osmolaridad": "No disponible",
-    "riesgo": "Riesgo alto"
+    "riesgo": "Alto"
   },
   {
     "nombre": "Sulfametoxazol-Trimetoprim  400/80 MG  AM (5 ML)",
@@ -367,6 +367,6 @@
     "estabilidad": "RE: 24 h",
     "ph": "6-7",
     "osmolaridad": "No disponible",
-    "riesgo": "Medio"
+    "riesgo": "Moderado"
   }
 ]
